@@ -9,6 +9,7 @@ class Writer:
     """
     result = 0
     err = True
+    message = True
     errorMessage = '*** The expression was not calculated succsesfully'
     def __init__(self, result, message):
         self.result = result
