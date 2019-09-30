@@ -1,6 +1,7 @@
 from classes.calculator import Calculator
 from classes.reader import Reader
 from classes.writer import Writer
+from classes.fileWriter import fileWriter
 
 class fileReader:
     InitMessage = '*** Write file name'
@@ -40,5 +41,5 @@ class fileReader:
             c = Calculator(self.isRPN, self.isFIB, self.isFAC, self.CalcExpression)
             calculus = c.calc()
             err = c.getErr()
-            w = Writer(calculus, err)
+            w = fileWriter(calculus, err)
             w.printResult()
