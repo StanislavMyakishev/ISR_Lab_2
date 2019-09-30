@@ -13,8 +13,10 @@ class Calculator:
     expr = []
     RPN = False
     FIB = False
+    FAC = False
     err = True
-    def __init__(self, RPN, FIB, expr):
+    def __init__(self, RPN, FIB, FAC, expr):
+        self.FAC = FAC
         self.RPN = RPN
         self.FIB = FIB
         self.expr = expr.split(' ')
@@ -34,6 +36,22 @@ class Calculator:
                 stack.append(int(token))
         self.err = False
         return stack.pop()
+    def calcFac(self):
+        if len(self.expr) != 1:
+            self.err = True
+            return 0
+        else: 
+            self.err = False
+            num = int(self.expr[0])
+            if num > 9000:
+                print('IT IS OVER 9000')
+                self.err = True
+                return 0
+            i = 1
+            while num >= 1:
+                i = i * num
+                num -= 1
+            return i
     def calcFib(self):
         if len(self.expr) != 1:
             self.err = True
@@ -58,6 +76,9 @@ class Calculator:
             return self.result
         elif (self.FIB == True): 
             self.result = self.calcFib()
+            return self.result
+        elif (self.FAC == True):
+            self.result = self.calcFac()
             return self.result
         else:
             self.expr = [self.expr[0], self.expr[2], self.expr[1]]
