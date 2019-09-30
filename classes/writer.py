@@ -6,7 +6,7 @@ class Writer:
     
     Returns:
         [type] -- [description]
-    """"
+    """
     result = 0
     err = True
     errorMessage = '*** The expression was not calculated succsesfully'
