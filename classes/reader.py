@@ -4,7 +4,6 @@
 # isRPN - returns bool sequence param
 class Reader:
     """Reads from console
-    
     Returns:
         string -- returns string expression and bool type of expression
     """

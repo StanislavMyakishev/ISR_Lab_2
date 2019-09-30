@@ -1,7 +1,7 @@
 import os
 
 class filewriter:
-    """Writes the result into file
+    """Writes the result into file. If there is no such file in dir - create a new one
     """
     InitMessage = '*** Write output file name'
     FilePath = ''
