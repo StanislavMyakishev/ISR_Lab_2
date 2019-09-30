@@ -4,20 +4,23 @@ from classes.writer import Writer
 from classes.fileWriter import filewriter
 
 class fileReader:
-    InitMessage = '*** Write file name'
-    FilePath = ''
+    """Reades input data from input() file name and calculates each expression
+    """
+    InitMessage = '*** Write input file name'
+    inPath = ''
+    outPath = ''
     isRPN = False
     isFIB = False
     isFAC = False
     CalcExpression = ''
-    def readFilePath(self):
+    def readInPath(self):
         print(self.InitMessage)
         print('>>> ', end='')
-        self.FilePath = input()
+        self.inPath = input()
     def doMath(self):
-        if (self.FilePath == ''):
-            self.FilePath = 'input.txt'
-        f = open(self.FilePath)
+        if (self.inPath == ''):
+            self.inPath = 'input.txt'
+        f = open(self.inPath)
         OPERATORS = ['+', '-', '*', '/', ' ']
         for line in f:
             self.CalcExpression = line.replace('\n', '')
@@ -41,7 +44,9 @@ class fileReader:
             c = Calculator(self.isRPN, self.isFIB, self.isFAC, self.CalcExpression)
             calculus = c.calc()
             err = c.getErr()
-            w = filewriter(calculus, err)
+            w = filewriter(calculus, err, self.outPath)
+            if (self.outPath == ''):
+                self.outPath = w.openFile()
             w.printResult()
             self.isRPN = False
             self.isFIB = False

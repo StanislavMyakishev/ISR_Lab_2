@@ -1,4 +1,0 @@
-*** The result is: 16
-*** The result is: 120
-*** The result is: 8
-*** The result is: 14
