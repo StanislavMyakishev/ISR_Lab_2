@@ -13,8 +13,9 @@ class filewriter:
     def printResult(self):
         if (self.FilePath == ''):
             self.FilePath = 'output.txt'
-        f = open(self.FilePath, 'w')
+        f = open(self.FilePath, 'a')
         if (self.message == False):
             f.write('%s %d\n' % ('*** The result is:', self.result))
         else:
             print(self.errorMessage + '\n')
+        f.close()
