@@ -2,10 +2,7 @@
 # __init__ - gets numerical result and boolean if there is error 
 # printResult - prints result if there is no error message
 class Writer:
-    """"[summary]
-    
-    Returns:
-        [type] -- [description]
+    """"Writes the result into console 
     """
     result = 0
     err = True
@@ -17,7 +14,5 @@ class Writer:
     def printResult(self):
         if (self.message == False):
             print('%s\n*** %d' % ('*** The result is:', self.result))
-            return True
         else:
             print(self.errorMessage)
-            return self.errorMessage
