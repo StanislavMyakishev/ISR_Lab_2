@@ -23,7 +23,7 @@ class filewriter:
             f = open(self.FilePath, 'w+')
         f = open(self.FilePath, 'a')
         if (self.message == False):
-            f.write('%s %d\n' % ('*** The result is:', self.result))
+            f.write('%s %d\n' % ('*** Result:', self.result))
         else:
             print(self.errorMessage + '\n')
         f.close()
