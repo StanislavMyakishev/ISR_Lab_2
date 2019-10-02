@@ -1,0 +1,9 @@
+[submodule "articles"]
+	path = articles
+	url = git://github.com/StanislavMyakishev/Articles_app
+[submodule "timer"]
+	path = timer
+	url = https://github.com/StanislavMyakishev/Sample-timer
+[submodule "INI_Parser"]
+	path = INI_Parser
+	url = https://github.com/StanislavMyakishev/INI_Parser
