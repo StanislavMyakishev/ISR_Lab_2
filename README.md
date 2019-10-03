@@ -10,11 +10,17 @@ Python 3
 brew install python3
 ```
 
+### Running
+
+```
+python3 main.py
+```
+
 ### Features
 
 Project is able to calculate the following math sequences 
 
-* [Simple sequences with '+', '-', '*', '/']
+* Simple sequences with '+', '-', '*', '/'
 * [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) - Reversed Polish Notation
 * [FIB](https://en.wikipedia.org/wiki/Fibonacci_number) - n-th Fibonacci number
 * [FAC](https://en.wikipedia.org/wiki/Factorial) - Factorial
